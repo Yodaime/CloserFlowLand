@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloserFlow | Automação Inteligente de Fechamento de Caixa</title>
+    <meta name="description" content="Automatize o fechamento de caixa com precisão. Reduza 95% das divergências e ganhe controle total do seu fluxo de caixa em tempo real.">
+    <meta name="keywords" content="fechamento de caixa, automação, controle financeiro, varejo, joalheria, ERP, gestão">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CloserFlow | Automação Inteligente de Fechamento de Caixa">
+    <meta property="og:description" content="Automatize o fechamento de caixa com precisão. Reduza 95% das divergências e ganhe controle total.">
+    <meta property="og:image" content="images/dashboard-preview.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <span class="logo-text">Closer<span class="logo-highlight">Flow</span></span>
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#solucao">Solução</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#implementacao">Implementação</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li class="nav-cta">
+                        <a href="#demo" class="btn btn-primary btn-sm">Agendar Demonstração</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">🚀 MVP EM TESTE - VAGAS LIMITADAS</div>
+                    <h1 class="hero-title">
+                        Pare de perder <span class="highlight">milhares</span> com fechamentos manuais
+                    </h1>
+                    <p class="hero-subtitle">
+                        O sistema especializado para joalherias e varejo de alto valor que 
+                        <strong>elimina divergências, automatiza auditorias</strong> e dá 
+                        <strong>controle total em tempo real</strong> do seu fluxo de caixa.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#demo" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-check"></i> Agendar Demonstração Gratuita
+                        </a>
+                        <p class="cta-note">
+                            <i class="fas fa-gift"></i> <strong>Oferta especial MVP:</strong> 15 dias grátis + setup personalizado
+                        </p>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">-95%</div>
+                            <div class="stat-label">Divergências</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">-70%</div>
+                            <div class="stat-label">Tempo de fechamento</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Rastreabilidade</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="dashboard-preview">
+                        <div class="dashboard-header">
+                            <div class="dashboard-title">Painel de Controle - CloserFlow</div>
+                            <div class="dashboard-subtitle">Visão em tempo real | Todas as lojas</div>
+                        </div>
+                        <div class="dashboard-content">
+                            <!-- Elementos do dashboard simulados -->
+                            <div class="metric-card">
+                                <div class="metric-value">R$ 42.850,00</div>
+                                <div class="metric-label">Fechamento do dia</div>
+                            </div>
+                            <div class="metric-card success">
+                                <div class="metric-value">0 divergências</div>
+                                <div class="metric-label">Caixas fechados</div>
+                            </div>
+                            <div class="stores-list">
+                                <div class="store-item">
+                                    <span class="store-name">Loja Centro</span>
+                                    <span class="store-status status-ok">✓ Fechado</span>
+                                </div>
+                                <div class="store-item">
+                                    <span class="store-name">Loja Shopping</span>
+                                    <span class="store-status status-ok">✓ Fechado</span>
+                                </div>
+                                <div class="store-item">
+                                    <span class="store-name">Loja Premium</span>
+                                    <span class="store-status status-pending">● Em andamento</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points" id="problema">
+        <div class="container">
+            <div class="section-header">
+                <h2>A <span class="highlight">dor silenciosa</span> que consome seu lucro</h2>
+                <p class="section-subtitle">
+                    Você reconhece algum desses problemas na sua operação?
+                </p>
+            </div>
+            
+            <div class="pain-cards">
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Planilhas caóticas e retrabalho</h3>
+                    <p>Horas perdidas cruzando planilhas desconexas, anotações em papel e mensagens no WhatsApp.</p>
+                    <ul class="pain-list">
+                        <li><i class="fas fa-times"></i> Conferências intermináveis toda noite</li>
+                        <li><i class="fas fa-times"></i> Erros humanos que ninguém consegue rastrear</li>
+                        <li><i class="fas fa-times"></i> Falta de padrão entre diferentes lojas</li>
+                    </ul>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3>Cegueira operacional</h3>
+                    <p>Dados fragmentados impedem uma visão clara e atrasam decisões estratégicas.</p>
+                    <ul class="pain-list">
+                        <li><i class="fas fa-times"></i> Impossibilidade de comparar lojas em tempo real</li>
+                        <li><i class="fas fa-times"></i> Decisões baseadas em dados desatualizados</li>
+                        <li><i class="fas fa-times"></i> Auditorias demoradas e incompletas</li>
+                    </ul>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">
+                        <i class="fas fa-chart-line-down"></i>
+                    </div>
+                    <h3>Perdas invisíveis</h3>
+                    <p>Pequenas divergências diárias somam dezenas de milhares em prejuízo anual.</p>
+                    <ul class="pain-list">
+                        <li><i class="fas fa-times"></i> R$ 500 aqui, R$ 1.000 ali... some no final do mês</li>
+                        <li><i class="fas fa-times"></i> Capital de giro comprometido sem explicação</li>
+                        <li><i class="fas fa-times"></i> Lucratividade corroída silenciosamente</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pain-quote">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">
+                    "Negócios de alto valor não podem depender de controles de baixa tecnologia. 
+                    Cada real perdido em divergência é lucro que deixa de entrar no seu caixa."
+                </p>
+                <p class="quote-author">— Especialistas em Gestão de Varejo de Alto Valor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solucao">
+        <div class="container">
+            <div class="section-header">
+                <h2>A solução: <span class="highlight">Controle total em uma única plataforma</span></h2>
+                <p class="section-subtitle">
+                    O CloserFlow foi desenvolvido especificamente para o varejo de alto valor, 
+                    centralizando todos os seus caixas, lojas e auditorias em um sistema seguro e padronizado.
+                </p>
+            </div>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-card-header">
+                        <div class="solution-icon">
+                            <i class="fas fa-gauge-high"></i>
+                        </div>
+                        <h3>Dashboard Executivo Inteligente</h3>
+                    </div>
+                    <p>Visualize todas as unidades em tempo real com alertas automáticos de divergências.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Visão consolidada de todas as lojas</li>
+                        <li><i class="fas fa-check"></i> Alertas em tempo real</li>
+                        <li><i class="fas fa-check"></i> Gráficos de desempenho comparativo</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-card-header">
+                        <div class="solution-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Fechamento Guiado à Prova de Erros</h3>
+                    </div>
+                    <p>Processo passo a passo que não deixa o colaborador pular etapas.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Validação automática de comprovantes</li>
+                        <li><i class="fas fa-check"></i> Redução de 95% nas divergências</li>
+                        <li><i class="fas fa-check"></i> Interface intuitiva e amigável</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-card-header">
+                        <div class="solution-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Auditoria Completa e Rastreável</h3>
+                    </div>
+                    <p>Histórico completo de quem fez cada ação, quando e de onde.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Rastreabilidade total de ajustes</li>
+                        <li><i class="fas fa-check"></i> Compliance natural para sua operação</li>
+                        <li><i class="fas fa-check"></i> Logs detalhados de todas as ações</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-card-header">
+                        <div class="solution-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Relatórios Automatizados</h3>
+                    </div>
+                    <p>Relatórios prontos para contabilidade sem esforço manual.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Exportação facilitada para análise</li>
+                        <li><i class="fas fa-check"></i> Dados prontos para contabilidade</li>
+                        <li><i class="fas fa-check"></i> Personalização de relatórios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results" id="resultados">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resultados que <span class="highlight">transformam</span> seu negócio</h2>
+                <p class="section-subtitle">
+                    Métricas reais reportadas por nossos primeiros clientes durante o período de testes do MVP.
+                </p>
+            </div>
+            
+            <div class="results-metrics">
+                <div class="metric-large">
+                    <div class="metric-value">-70%</div>
+                    <div class="metric-title">Tempo Operacional</div>
+                    <p>Redução no tempo gasto em fechamentos manuais e conferências</p>
+                </div>
+                
+                <div class="metric-large">
+                    <div class="metric-value">95%</div>
+                    <div class="metric-title">Menos Divergências</div>
+                    <p>Redução drástica em erros de lançamento e quebras de caixa</p>
+                </div>
+                
+                <div class="metric-large">
+                    <div class="metric-value">100%</div>
+                    <div class="metric-title">Rastreabilidade</div>
+                    <p>Controle total sobre cada ação em cada caixa e loja</p>
+                </div>
+                
+                <div class="metric-large">
+                    <div class="metric-value">< 1 semana</div>
+                    <div class="metric-title">Implementação</div>
+                    <p>De volta de férias a operação totalmente controlada</p>
+                </div>
+            </div>
+            
+            <div class="results-benefits">
+                <h3>Além dos números: benefícios tangíveis</h3>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>Visibilidade Total</h4>
+                        <p>Saiba em tempo real como cada loja está performando, sem surpresas.</p>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Decisões Ágeis</h4>
+                        <p>Baseie suas decisões em dados confiáveis e centralizados.</p>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h4>Paz Operacional</h4>
+                        <p>Fim das noites mal dormidas preocupado com o caixa.</p>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h4>Escalabilidade</h4>
+                        <p>Gerencie 3 ou 30 lojas com a mesma facilidade e controle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Form Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="demo-container">
+                <div class="demo-content">
+                    <h2 class="demo-title">
+                        <span class="highlight">Oferta especial MVP:</span> Teste grátis por 15 dias
+                    </h2>
+                    
+                    <div class="demo-offer">
+                        <div class="offer-card">
+                            <div class="offer-badge">🔥 OFERTA LIMITADA</div>
+                            <h3>Plano MVP Foundation</h3>
+                            <div class="offer-price">
+                                <span class="price-old">R$ 297/mês</span>
+                                <span class="price-new">GRÁTIS*</span>
+                            </div>
+                            <p class="price-note">*15 dias grátis + condições especiais para primeiros clientes</p>
+                            
+                            <ul class="offer-features">
+                                <li><i class="fas fa-check"></i> <strong>Dashboard executivo completo</strong></li>
+                                <li><i class="fas fa-check"></i> Até 3 lojas conectadas</li>
+                                <li><i class="fas fa-check"></i> Fechamento guiado ilimitado</li>
+                                <li><i class="fas fa-check"></i> Auditoria e rastreabilidade total</li>
+                                <li><i class="fas fa-check"></i> Suporte especializado prioritário</li>
+                                <li><i class="fas fa-check"></i> Setup e treinamento personalizado</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Sem compromisso • Cancelamento a qualquer momento</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Agendamento flexível • Demonstração de 30 minutos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-form-container">
+                    <div class="form-header">
+                        <h3>Agende sua demonstração personalizada</h3>
+                        <p>Preencha o formulário abaixo e nossa equipe entrará em contato em até 24h.</p>
+                    </div>
+                    
+                    <form id="demoForm" class="demo-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Como gostaria de ser chamado">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail Corporativo *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com.br">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefone/WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(31) 99999-9999">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Nome da Empresa *</label>
+                            <input type="text" id="company" name="company" required placeholder="Sua joalheria ou loja">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="stores">Quantidade de Lojas *</label>
+                            <select id="stores" name="stores" required>
+                                <option value="">Selecione...</option>
+                                <option value="1">1 loja</option>
+                                <option value="2-3">2-3 lojas</option>
+                                <option value="4-10">4-10 lojas</option>
+                                <option value="10+">Mais de 10 lojas</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="challenge">Maior desafio no fechamento atualmente *</label>
+                            <textarea id="challenge" name="challenge" rows="3" required placeholder="Ex: Divergências frequentes, tempo excessivo, falta de visibilidade entre lojas..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <label for="agree">
+                                Concordo em receber informações sobre o CloserFlow e ofertas especiais do MVP.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Enviar Agendamento
+                        </button>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-shield-alt"></i> Seus dados estão seguros. Não compartilhamos informações com terceiros.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perguntas <span class="highlight">frequentes</span></h2>
+                <p class="section-subtitle">
+                    Tudo o que você precisa saber sobre o CloserFlow e nossa oferta MVP.
+                </p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O CloserFlow funciona offline ou com internet instável?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Desenvolvemos o CloserFlow para funcionar perfeitamente mesmo em situações de conexão intermitente. As operações são salvas localmente e sincronizadas automaticamente quando a conexão é restabelecida.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Preciso trocar meu sistema atual para usar o CloserFlow?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não necessariamente. O CloserFlow pode funcionar como um complemento ao seu sistema atual, especialmente para o controle específico do fechamento de caixa. Durante a demonstração, avaliamos a melhor forma de integração para sua operação.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona o período de testes gratuito de 15 dias?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você terá acesso completo a todas as funcionalidades do CloserFlow por 15 dias, sem custo algum. Incluímos setup personalizado, treinamento da sua equipe e suporte especializado durante todo o período. Sem compromisso de continuidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Meus dados financeiros estão seguros na plataforma?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Totalmente. Utilizamos criptografia de ponta a ponta, servidores localizados no Brasil e somos totalmente compliant com a LGPD. Seus dados financeiros são tratados com máxima segurança e confidencialidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual o tempo médio para ver resultados concretos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nossos clientes relatam redução imediata no tempo de fechamento já na primeira semana. Em 30 dias, você já terá dados concretos sobre redução de divergências e ganho de eficiência operacional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-container">
+                <h2 class="cta-title">Pronto para transformar seu fechamento de caixa?</h2>
+                <p class="cta-subtitle">
+                    Junte-se aos primeiros clientes do MVP e garanta condições especiais de lançamento.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="#demo" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Agendar Demonstração Gratuita
+                    </a>
+                    <a href="https://wa.me/5531996816182?text=Olá! Gostaria de mais informações sobre o CloserFlow" 
+                       target="_blank" class="btn btn-outline btn-lg">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                </div>
+                
+                <div class="cta-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Agendamento em 30 minutos</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>15 dias grátis para testar</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-user-check"></i>
+                        <span>Suporte especializado incluído</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <span class="logo-text">Closer<span class="logo-highlight">Flow</span></span>
+                    </a>
+                    <p class="footer-description">
+                        Sistema especializado em automação de fechamento de caixa para o varejo de alto valor.
+                    </p>
+                    
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:comercial@closerflow.com.br">comercial@closerflow.com.br</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+5531996816182">(31) 99681-6182</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Belo Horizonte, MG</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="#solucao">Funcionalidades</a></li>
+                        <li><a href="#resultados">Resultados</a></li>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#implementacao">Implementação</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#demo">Agendar Demonstração</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">LGPD</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/5531996816182" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 CloserFlow. Todos os direitos reservados.</p>
+                    <p>MVP em fase de testes • Vagas limitadas para clientes pioneiros</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

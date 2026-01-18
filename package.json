@@ -1,0 +1,25 @@
+{
+  "name": "closerflow-landing",
+  "version": "1.0.0",
+  "description": "Landing page otimizada para o sistema CloserFlow - Automação Inteligente de Fechamento de Caixa",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000",
+    "dev": "http-server -p 8000 -c-1",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "fechamento de caixa",
+    "automação",
+    "controle financeiro",
+    "varejo",
+    "joalheria",
+    "ERP",
+    "gestão"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
