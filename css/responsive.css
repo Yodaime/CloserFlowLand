@@ -52,6 +52,10 @@
     .stat-item {
         justify-content: flex-start;
     }
+    
+    .results-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -214,6 +218,10 @@
     
     .pain-cards,
     .solution-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-metrics {
         grid-template-columns: 1fr;
     }
 }

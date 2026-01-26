@@ -376,8 +376,10 @@ p {
 
 .dashboard-container {
     position: relative;
-    width: 100%;
+    width: 120%;
+    max-width: none;
     animation: floatUp 3s ease-in-out infinite;
+    transform: scale(1.1);
 }
 
 @keyframes floatUp {
@@ -394,8 +396,8 @@ p {
     z-index: 2;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(106, 0, 244, 0.3), 0 0 80px rgba(0, 180, 216, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 80px rgba(106, 0, 244, 0.4), 0 0 100px rgba(0, 180, 216, 0.15);
+    border: 2px solid rgba(0, 180, 216, 0.3);
     backdrop-filter: blur(10px);
 }
 
@@ -671,27 +673,52 @@ p {
 
 .results-metrics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
 }
 
 .metric-large {
     text-align: center;
-    padding: var(--space-lg);
+    padding: var(--space-xl);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 180, 216, 0.3);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.metric-large:hover {
+    background: rgba(0, 180, 216, 0.1);
+    border-color: rgba(0, 180, 216, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.2);
 }
 
 .metric-large .metric-value {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
     color: var(--secondary);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
+    line-height: 1;
 }
 
 .metric-large .metric-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
+    color: var(--white);
+}
+
+.metric-large p {
+    font-size: 0.9rem;
+    color: var(--gray-light);
+    margin-bottom: 0;
+    line-height: 1.5;
 }
 
 .benefits-grid {
@@ -709,6 +736,105 @@ p {
     font-size: 2.5rem;
     color: var(--secondary);
     margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   DIFERENCIAIS SECTION
+   ============================================ */
+.diferenciais-section {
+    padding: var(--space-2xl) 0;
+}
+
+.comparison-table-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-top: var(--space-2xl);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--dark);
+}
+
+.comparison-table thead {
+    background: linear-gradient(135deg, #1e5a96 0%, #0093b3 100%);
+    color: var(--white);
+}
+
+.comparison-table th {
+    padding: var(--space-lg);
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.comparison-table th.criteria-column {
+    width: 25%;
+}
+
+.comparison-table th.generic-column,
+.comparison-table th.closerflow-column {
+    width: 37.5%;
+    text-align: center;
+}
+
+.column-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.column-label.closerflow-highlight {
+    background: rgba(255, 255, 255, 0.15);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+}
+
+.comparison-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: #f5f7fa;
+}
+
+.comparison-table td {
+    padding: var(--space-lg);
+    vertical-align: middle;
+}
+
+.comparison-table td.criteria-label {
+    font-weight: 600;
+    color: var(--dark);
+    width: 25%;
+}
+
+.comparison-table td.generic-value,
+.comparison-table td.closerflow-value {
+    text-align: center;
+    width: 37.5%;
+}
+
+.value-text {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: rgba(106, 0, 244, 0.1);
+    color: var(--dark);
+}
+
+.value-text.highlight-text {
+    background: rgba(0, 180, 216, 0.15);
+    color: #0093b3;
+    font-weight: 600;
 }
 
 /* ============================================
@@ -995,6 +1121,10 @@ p {
 
 .footer-brand {
     max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo-box {
@@ -1036,6 +1166,8 @@ p {
     font-size: 0.875rem;
     color: var(--gray);
     line-height: 1.6;
+    text-align: center;
+    margin-top: var(--space-lg);
 }
 
 .footer-contact-cards {
