@@ -36,16 +36,21 @@
         gap: var(--space-xl);
     }
     
-    .demo-container {
-        grid-template-columns: 1fr;
-    }
-    
     .hero-visual {
         order: -1;
     }
     
-    .cta-buttons {
-        flex-direction: column;
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .stat-item {
+        justify-content: flex-start;
     }
 }
 
@@ -116,10 +121,24 @@
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--space-lg);
     }
     
-    .footer-contact {
-        align-items: center;
+    .footer-logo-box {
+        justify-content: center;
+    }
+    
+    .footer-contact-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        text-align: center;
     }
 }
 
@@ -143,6 +162,15 @@
     
     .hero-subtitle {
         font-size: 1.125rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+    }
+    
+    .btn-lg {
+        width: 100%;
+        text-align: center;
     }
     
     .results-metrics {
